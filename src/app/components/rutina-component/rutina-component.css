@@ -1,94 +1,91 @@
-.rutina-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+    padding-top: 5rem; /* Ajuste por Navbar fijo */
+    background-color: #ffffff; 
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.rutina-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-  border-radius: 15px;
+h2, h5 {
+    font-weight: 700;
 }
 
-.rutina-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+/* Título "Arma tu Rutina" */
+.rutina-section h2 {
+    /* Color rosa suave similar al de la imagen */
+    color: #8c5b7f; 
+    margin-top: 0; 
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
-.rutina-subtitle {
-  font-size: 1.1rem;
+/* Reduce el espacio entre Navbar y sección */
+.rutina-section {
+    padding-top: 1.5rem; 
+    padding-bottom: 3rem;
 }
 
-.pasos-rutina {
-  margin: 3rem 0;
+/* ========================================= */
+/* 2. AJUSTES DE TARJETAS (DISEÑO, ESPACIADO) */
+/* ========================================= */
+
+.card {
+    border-radius: 0 !important; 
+    border: 1px solid #ddd !important; 
+    /* Altura más corta ya que las descripciones son más cortas */
+    min-height: 450px; 
+
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease, 
+                background-color 0.3s ease;
 }
 
-.paso {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  border-left: 5px solid #7c3aed;
+/* Hover: efecto rosa suave */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+    background-color: #f5e5f0; 
 }
 
-.paso-numero {
-  background: #7c3aed;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  flex-shrink: 0;
+/* 🔥 FIX: Espaciado equilibrado entre título y descripción */
+.card-body {
+    padding: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Espaciado ajustado para las descripciones de los pasos */
+    gap: 1rem;
 }
 
-.paso-contenido h2 {
-  color: #2d3748;
-  margin-bottom: 0.8rem;
+/* Título (tipo de piel) */
+.card-title {     
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; 
+
+    line-height: 1.1; 
+    flex-shrink: 0; 
+    
+    font-weight: 700;
+    color: #4a4a4a;
 }
 
-.paso-contenido p {
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+/* Descripción */
+.card-text {
+    margin-top: 0 !important; 
+    padding-top: 0; 
+    line-height: 1.3; 
+    flex-shrink: 0; 
 }
 
-.recomendaciones {
-  background: #f0f4ff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  margin-top: 3rem;
-}
-
-.recomendaciones h3 {
-  color: #2d3748;
-  margin-bottom: 1.5rem;
-}
-
-.recomendaciones ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recomendaciones li {
-  padding: 0.8rem 0;
-  padding-left: 2rem;
-  position: relative;
-  color: #4a5568;
-}
-
-.recomendaciones li:before {
-  content: "✨";
-  position: absolute;
-  left: 0;
+/* Imagen en la parte superior de cada tarjeta */
+.card-img-top {
+    width: 100%;
+    /* Altura ajustada para iconos */
+    height: 250px; 
+    object-fit: contain; /* Usar 'contain' para que el icono se vea completo y no cortado */
+    padding: 20px; /* Un poco de padding para que no toque los bordes */
+    border-radius: 0 !important; 
 }

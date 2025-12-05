@@ -1,86 +1,94 @@
-<div class="resenas-container">
-  <div class="resenas-header">
-    <h1>Reseñas de Productos</h1>
-    <p class="subtitle">Comparte tu experiencia con productos de skincare</p>
-  </div>
+<div class="resenas-container container py-5">
 
-  <div class="formulario-resena">
-    <h2>Agregar Nueva Reseña</h2>
-    
-    <form (ngSubmit)="agregarResena()" #resenaForm="ngForm">
-      <div class="form-group">
-        <label for="nombreProducto">Nombre del Producto *</label>
-        <input 
-          type="text" 
-          id="nombreProducto" 
-          name="nombreProducto"
-          [(ngModel)]="nuevaResena.nombreProducto"
-          required
-          placeholder="Ej: Crema hidratante XYZ"
-          class="form-control"
-        >
-      </div>
-
-      <div class="form-group">
-        <label>Puntuación (1-5)</label>
-        <div class="puntuacion">
-          <button 
-            type="button" 
-            *ngFor="let star of [1,2,3,4,5]"
-            (click)="nuevaResena.puntuacion = star"
-            [class.active]="star <= nuevaResena.puntuacion"
-            class="star-btn"
-          >
-            ★
-          </button>
-          <span class="puntuacion-texto">{{ nuevaResena.puntuacion }} de 5 estrellas</span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="descripcion">Descripción *</label>
-        <textarea 
-          id="descripcion" 
-          name="descripcion"
-          [(ngModel)]="nuevaResena.descripcion"
-          required
-          rows="4"
-          placeholder="Describe tu experiencia con el producto..."
-          class="form-control"
-        ></textarea>
-      </div>
-
-      <button 
-        type="submit" 
-        [disabled]="!resenaForm.form.valid"
-        class="submit-btn"
-      >
-        Publicar Reseña
-      </button>
-    </form>
-  </div>
-
-  <div class="lista-resenas">
-    <h2>Reseñas de la Comunidad</h2>
-    
-    <div *ngIf="resenas.length === 0" class="sin-resenas">
-      <p>No hay reseñas aún. ¡Sé el primero en compartir!</p>
+    <div class="resenas-header mb-5 text-center">
+        <h2 class="titulo-resenas text-uppercase">RESEÑAS DE PRODUCTOS</h2>
+        <p class="subtitulo-resenas lead">Comparte tu experiencia con productos de skincare:</p>
     </div>
 
-    <div *ngFor="let resena of resenas" class="resena-card">
-      <div class="resena-header">
-        <h3 class="producto-nombre">{{ resena.nombreProducto }}</h3>
-        <div class="resena-meta">
-          <div class="estrellas">
-            <span *ngFor="let star of [1,2,3,4,5]" 
-                  [class.active]="star <= resena.puntuacion">
-              ★
-            </span>
-          </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <section class="formulario-resena p-4 mb-5 border rounded bg-white shadow-sm">
+                <h2 class="h4 fw-bold mb-4">Agregar Nueva Reseña</h2>
+                
+                <form (ngSubmit)="agregarResena()" #resenaForm="ngForm">
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label fw-semibold small">Nombre del Producto *</label>
+                        <input 
+                            type="text" 
+                            id="nombreProducto" 
+                            name="nombreProducto"
+                            [(ngModel)]="nuevaResena.nombreProducto"
+                            required
+                            placeholder="Ej: Crema hidratante XYZ"
+                            class="form-control"
+                        >
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold small d-block">Puntuación (1-5) *</label>
+                        <div class="puntuacion d-flex align-items-center">
+                            <div class="star-rating me-3">
+                                <button 
+                                    type="button" 
+                                    *ngFor="let star of [1,2,3,4,5]"
+                                    (click)="nuevaResena.puntuacion = star"
+                                    [class.active]="star <= nuevaResena.puntuacion"
+                                    class="star-btn border-0 bg-transparent p-0"
+                                >
+                                    ★
+                                </button>
+                            </div>
+                            <span class="puntuacion-texto text-muted small">{{ nuevaResena.puntuacion }} de 5 estrellas</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="descripcion" class="form-label fw-semibold small">Descripción *</label>
+                        <textarea 
+                            id="descripcion" 
+                            name="descripcion"
+                            [(ngModel)]="nuevaResena.descripcion"
+                            required
+                            rows="4"
+                            placeholder="Describe tu experiencia con el producto..."
+                            class="form-control"
+                        ></textarea>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        [disabled]="!resenaForm.form.valid"
+                        class="btn submit-btn"
+                    >
+                        Publicar Reseña
+                    </button>
+                </form>
+            </section>
+
+            <section class="lista-resenas pt-4">
+                <h2 class="h4 fw-bold mb-4">Reseñas de la Comunidad</h2>
+                
+                <div *ngIf="resenas.length === 0" class="sin-resenas text-center p-3 border rounded text-muted">
+                    <p class="mb-0">No hay reseñas aún. ¡Sé el primero en compartir!</p>
+                </div>
+
+                <div *ngFor="let resena of resenas" class="resena-card border-bottom py-3">
+                    <div class="resena-header d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="producto-nombre h5 fw-bold mb-0">{{ resena.nombreProducto }}</h3>
+                        <div class="resena-meta text-end">
+                            <div class="estrellas">
+                                <span *ngFor="let star of [1,2,3,4,5]" 
+                                    [class.active]="star <= resena.puntuacion" 
+                                    class="star-display">
+                                    ★
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="resena-descripcion text-muted mb-0">{{ resena.descripcion }}</p>
+                </div>
+            </section>
         </div>
-      </div>
-      
-      <p class="resena-descripcion">{{ resena.descripcion }}</p>
     </div>
-  </div>
 </div>

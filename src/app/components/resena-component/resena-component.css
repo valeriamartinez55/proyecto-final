@@ -1,0 +1,103 @@
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.resenas-container {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+/* ====== ENCABEZADO ACTUALIZADO (igual al estilo de "CONOCE TU PIEL") ====== */
+.titulo-resenas {
+    color: #9d5089;
+    font-weight: 700;
+    font-size: 2rem; 
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-resenas {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- FORMULARIO --- */
+.formulario-resena {
+    border-color: #eee !important;
+}
+
+.formulario-resena h2 {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    padding: 0.6rem 0.75rem;
+}
+
+/* Sistema de Puntuación */
+.star-rating {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.star-btn {
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.2s;
+    outline: none;
+}
+
+.star-btn:focus {
+    box-shadow: none;
+}
+
+.star-btn.active {
+    color: #ffc107;
+}
+
+/* Botón publicar */
+.submit-btn {
+    background-color: #9d5089;
+    border-color: #9d5089;
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #8c5b7f;
+    border-color: #8c5b7f;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Lista de reseñas */
+.lista-resenas h2 {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+}
+
+.resena-card {
+    border-color: #eee !important;
+}
+
+.producto-nombre {
+    color: #333;
+}
+
+/* Estrellas de visualización */
+.star-display {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.star-display.active {
+    color: #ffc107;
+}
