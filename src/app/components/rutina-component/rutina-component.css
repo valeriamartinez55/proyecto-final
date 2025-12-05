@@ -1,0 +1,94 @@
+.rutina-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.rutina-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 15px;
+}
+
+.rutina-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.rutina-subtitle {
+  font-size: 1.1rem;
+}
+
+.pasos-rutina {
+  margin: 3rem 0;
+}
+
+.paso {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border-left: 5px solid #7c3aed;
+}
+
+.paso-numero {
+  background: #7c3aed;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.paso-contenido h2 {
+  color: #2d3748;
+  margin-bottom: 0.8rem;
+}
+
+.paso-contenido p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.recomendaciones {
+  background: #f0f4ff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.recomendaciones h3 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.recomendaciones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recomendaciones li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: #4a5568;
+}
+
+.recomendaciones li:before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+}
