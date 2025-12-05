@@ -1,0 +1,49 @@
+/* ---------------------------
+   NAVBAR GENERAL
+---------------------------- */
+.navbar-custom {
+  background-color: #b86c8b; /* Rosa estilo foto 5 */
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Marca (SkincareFacial) */
+.brand-custom {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.brand-custom span {
+  font-weight: 300;
+}
+
+/* Enlaces */
+.nav-link {
+  color: #ffeef4;
+  margin-left: 25px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Link activo */
+.active-link {
+  color: #fff;
+  border-bottom: 2px solid white;
+}
+
+/* Mobile */
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
