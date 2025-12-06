@@ -13,7 +13,7 @@ export class ResenaServicio {
   }
 
   agregarResena(resena: Resena): void {
-    this.resenas.unshift(resena); // Agrega al inicio
+    this.resenas.unshift(resena); 
     this.guardarResenas();
   }
 

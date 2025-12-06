@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'; // <--- 1. Importar esto
+import { RouterLink } from '@angular/router'; 
 
 @Component({
   selector: 'app-inicio-component',
   standalone: true,
-  imports: [RouterLink], // <--- 2. Agregar aquí
+  imports: [RouterLink], 
   templateUrl: './inicio-component.html',
   styleUrl: './inicio-component.css'
 })
